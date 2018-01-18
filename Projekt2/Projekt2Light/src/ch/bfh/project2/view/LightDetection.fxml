@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.HBox?>
+	
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ch.bfh.project2.controller.LightDetectionController">
+	<center>
+		<HBox alignment="CENTER" spacing="5">
+			<padding>
+				<Insets right="10" left="10" />
+			</padding>
+			<ImageView fx:id="originalFrame" />
+			<ImageView fx:id="morphImage" />
+		</HBox>
+	</center>
+	<bottom>
+		<VBox alignment="TOP_LEFT" spacing="15">
+			<padding>
+				<Insets top="25" right="25" bottom="25" left="25" />
+			</padding>
+			<fx:define>
+        		<ToggleGroup fx:id="activeFilter"/>
+    		</fx:define>
+    		<children>
+        		<RadioButton fx:id="radioBright" text="brightness" toggleGroup="$activeFilter" selected="true"/>
+        		<RadioButton fx:id="radioColor" text="color" toggleGroup="$activeFilter"/>
+    		</children>
+    		
+			<HBox spacing="15">
+				<Label text="Brightness Filter" />
+				<Slider fx:id="brightnessFilter" min="0" max="255" value="210" blockIncrement="1" />
+			</HBox>
+			<HBox spacing="15">
+				<Label text="Red Min    " />
+				<Slider fx:id="redMin" min="0" max="255" value="200" blockIncrement="1" />
+				<Label text="Red Max    " />
+				<Slider fx:id="redMax" min="0" max="255" value="255" blockIncrement="1" />
+			</HBox>
+			<HBox spacing="15">
+				<Label text="Green Min" />
+				<Slider fx:id="greenMin" min="0" max="255" value="0" blockIncrement="1" />
+				<Label text="Green Max" />
+				<Slider fx:id="greenMax" min="0" max="255" value="0" blockIncrement="1" />
+			</HBox>
+			<HBox spacing="15">
+				<Label text="Blue Min   " />
+				<Slider fx:id="blueMin" min="0" max="255" value="0" blockIncrement="1" />
+				<Label text="Blue Max   " />
+				<Slider fx:id="blueMax" min="0" max="255" value="0" blockIncrement="1" />
+			</HBox>
+			<Button fx:id="cameraButton" alignment="center" text="Start camera" onAction="#startCamera" />
+		</VBox>
+	</bottom>
+</BorderPane>
