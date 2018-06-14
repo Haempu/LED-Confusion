@@ -1,0 +1,2 @@
+MQTT Broker IP;147.87.16.220
+Schwarz/Weiss Schwellwert (0 - 255);220

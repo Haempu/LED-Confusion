@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Kamera-Service</string>
+    <string-array name="ports">
+        <item>1883</item>
+        <item>8883</item>
+    </string-array>
+</resources>

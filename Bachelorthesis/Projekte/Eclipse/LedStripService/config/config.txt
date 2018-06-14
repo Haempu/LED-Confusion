@@ -1,0 +1,7 @@
+MQTT Broker IP;147.87.16.220
+Master Brick IP;localhost
+Master Brick Port;4223
+Master Brick UID;6CPevm
+LED-Strip UID;wSj
+Mindestanzahl vorhandener LEDs;200
+Mappinghelligkeit in %;60

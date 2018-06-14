@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="ch.bfh.eliaboesiger.lightmapper.controller.activity.MappingDrawingActivity">
+
+    <ProgressBar
+        android:id="@+id/drawingingProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:indeterminate="true"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TextView
+            android:id="@+id/mappingDrawingId"
+            android:fontFamily="sans-serif"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="start|center_vertical"
+            android:visibility = "gone"/>
+        <TextView
+            android:id="@+id/sceneryDrawingId"
+            android:fontFamily="sans-serif"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="start|center_vertical"
+            android:visibility = "gone"/>
+        <TextView
+            android:id="@+id/sceneryDrawingName"
+            android:fontFamily="sans-serif"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="start|center_vertical"
+            android:visibility = "gone"/>
+
+        <TextView
+            android:id="@+id/titleDrawing"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:fontFamily="sans-serif"
+            android:textSize="60px"
+            android:gravity="start|center_vertical"/>
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/ledLayout"
+            android:layout_width="match_parent"
+            android:layout_height="270dp">
+
+            <ImageView
+                android:id="@+id/ledImage"
+                android:layout_height="270dp"
+                android:layout_width="match_parent"
+                android:src="@drawable/rectangle"/>
+        </FrameLayout>
+
+        <ch.bfh.eliaboesiger.lightmapper.component.ColorPicker
+            android:id="@+id/colorPicker"
+            android:defaultValue="0xffffffff"
+            android:key="preferenceKeyName"
+            android:title="Farbe"
+            android:summary="Summary"
+            android:layout_height="180dp"
+            android:layout_width="180dp"/>
+
+        <Switch
+            android:id="@+id/onOffSwitch"
+            android:text="Leuchtquelle an/aus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"/>
+        <ImageView
+            android:id="@+id/brightnessImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/brightness" />
+
+        <SeekBar android:id="@+id/brightnessValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:max="100"
+                android:min="0"
+                android:progress="100"/>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="ch.bfh.eliaboesiger.lightmapper.controller.activity.SceneryConfigActivity">
+
+    <ProgressBar
+        android:id="@+id/sceneryConfigLoader"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:indeterminate="true"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TextView
+            android:id="@+id/sceneryConfigId"
+            android:fontFamily="sans-serif"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="60px"
+            android:gravity="start|center_vertical"
+            android:visibility = "gone"/>
+
+        <TextView
+            android:id="@+id/sceneryConfigTitle"
+            android:fontFamily="sans-serif"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Neue Beleuchtung"
+            android:textSize="60px"
+            android:gravity="start|center_vertical"/>
+
+        <EditText
+            android:id="@+id/sceneryConfigName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Name der Beleuchtung" />
+
+        <EditText
+            android:id="@+id/sceneryConfigIpAdress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="MQTT-Broker IP (z.B. 192.168.23.2)" />
+
+        <Button
+            android:id="@+id/sceneryConfigCheckConnection"
+            android:text="Verbindung Prüfen"
+            android:backgroundTint="@color/buttonColor"
+            android:textColor="@android:color/white"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"/>
+
+        <TableLayout
+            android:id="@+id/sceneryConfigServiceLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:visibility="gone">
+
+            <TableRow android:gravity="center_vertical"
+                android:minHeight="40dp">
+                <ImageView
+                    android:id="@+id/availableImageCameraService"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/service_not_available"  />
+                <TextView
+                    android:text="Kamera-Service"
+                    android:textSize="45px"
+                    android:layout_marginLeft="20dp"/>
+                <!--<Spinner
+                    android:id="@+id/cameraServiceSpinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ems="10"
+                    android:textSize="60px"/>-->
+            </TableRow>
+            <TableRow android:gravity="center_vertical"
+                android:minHeight="40dp">
+                <ImageView
+                    android:id="@+id/availableImageLedService"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/service_not_available"  />
+                <TextView
+                    android:text="Leuchtquellen-Service"
+                    android:textSize="45px"
+                    android:layout_marginLeft="20dp"/>
+                <!--<Spinner
+                    android:id="@+id/ledServiceSpinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ems="10"
+                    android:textSize="60px"/>-->
+            </TableRow>
+            <TableRow android:gravity="center_vertical"
+                android:minHeight="40dp">
+                <ImageView
+                    android:id="@+id/availableImageDataService"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/service_not_available"  />
+                <TextView
+                    android:text="Datenverarbeituns-Service"
+                    android:textSize="45px"
+                    android:layout_marginLeft="20dp"/>
+            </TableRow>
+            <TableRow android:gravity="center_vertical"
+                android:minHeight="40dp">
+                <ImageView
+                    android:id="@+id/availableImageAgent"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/service_not_available"  />
+                <TextView
+                    android:text="Agent"
+                    android:textSize="45px"
+                    android:layout_marginLeft="20dp"/>
+            </TableRow>
+        </TableLayout>
+
+        <Switch
+            android:id="@+id/mappingOnOff"
+            android:text="Erneut Mappen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginTop="20dp"
+            android:textSize="45px"
+            android:textColor="@android:color/tab_indicator_text"
+            android:layout_gravity="left"
+            android:switchPadding="80px"/>
+
+        <Button
+            android:id="@+id/sceneryConfigButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/buttonColor"
+            android:text="Erstellen und Mappen"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+

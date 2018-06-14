@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/actionAddImageMapping"
+        android:title="Bild anzeigen"
+        android:icon="@drawable/add_image"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/actionDeleteMapping"
+        android:title="Löschen"
+        android:icon="@drawable/trash"
+        app:showAsAction="always" />
+</menu>
