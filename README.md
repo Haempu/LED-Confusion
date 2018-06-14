@@ -1,6 +1,6 @@
 # LED-Confusion
 
-<h2>Inhalt des Git-Repositorys LED-Confusion</h2>
+<h2>Inhalt des Git-Repository LED-Confusion</h2>
 
 /Bachelorthesis
 
