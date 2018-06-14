@@ -18,7 +18,7 @@
    
 <h2>Abstract der Bachelorthesis</h2>
 
-<stron>Ausgangslage</strong>
+<strong>Ausgangslage</strong>
 
 Lichterketten mit LEDs werden immer populärer. Während die Leute jedoch vor zehn Jahren noch damit zufrieden waren, einfach in einer festgelegten Reihenfolge die Farben wechseln zu lassen, wollen sie heute das Motiv gleich selber bestimmen. Dies ist jedoch mit einem erheblichen Aufwand verbunden. Die Konfiguration jeder einzelnen Leuchtquelle in der Lichterkette benötigt technisches Verständnis und ist aufwändig.
 
